@@ -1,5 +1,9 @@
 #!/bin/bash
 source /etc/epiphyte.d/pkgcache.conf
+if [ -z "$PACKAGE_HOST" ]; then
+    echo "PACKAGE_HOST is not set"
+    exit 1
+fi
 CACHED="cache/"
 HOST_CACHE=$PACKAGE_HOST/$CACHED
 CACHE=/var/cache/pacman/pkg/
