@@ -5,6 +5,14 @@ servers
 
 configure and setup the epiphyte [repository](https://github.com/epiphyte/repository)
 
+# install
+
+make sure to pre-clean and then install
+```
+rm -f /etc/vimrc
+pacman -S epiphyte-servers
+```
+
 ## zfs
 
 ### scrub monthly
@@ -29,3 +37,24 @@ request an rsyncd-based cache pull
 ```
 systemctl enable pkgcaching.timer
 ```
+
+## sudo ssh agent
+
+provides socket pass through on ssh
+```
+sudo-ssh-agent
+```
+
+## configs
+
+### vimrc
+
+common/useful vimrc though simple
+
+### gitignore
+
+default gitignore for system etc keeping
+
+### ntpd
+
+an override for ntpd that sets to ipv4 only
