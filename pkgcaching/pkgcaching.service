@@ -1,0 +1,6 @@
+[Unit]
+Description=Perform package cache syncing
+
+[Service]
+Type=oneshot
+ExecStart=/etc/sysconf/caching/run.sh

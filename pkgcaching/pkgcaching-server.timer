@@ -1,0 +1,9 @@
+[Unit]
+Description=Cleanup package cache
+
+[Timer]
+Unit=pkgcaching-server.service
+OnCalendar=*-*-* 00:00:00
+
+[Install]
+WantedBy=timers.target

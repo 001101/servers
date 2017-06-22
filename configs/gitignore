@@ -1,0 +1,84 @@
+/*
+!.gitignore
+!.gitmodules
+
+# libvirt definitions
+!/libvirt
+/libvirt/*
+!/libvirt/qemu
+/libvirt/qemu/*
+!/libvirt/qemu/*.xml
+
+# systemd definitions
+!/systemd
+/systemd/*
+!/systemd/nspawn
+!/systemd/network
+!resolv.conf
+
+# our configurations
+!/conf.d
+/conf.d/libvirt*
+/conf.d/samba
+
+# polkit custom rules
+!/polkit-1/
+/polkit-1/*
+!/polkit-1/rules.d/
+/polkit-1/rules.d/*
+!/polkit-1/rules.d/50-libvirt.rules
+
+# general configuraions
+!crypttab
+!fstab
+!mkinitcpio.conf
+
+# iptables
+!/iptables/iptables.rules
+
+# samba
+!/samba
+/samba/*
+!/samba/smb.conf
+
+# sshd
+!/ssh
+/ssh/*
+!/ssh/sshd_config
+
+# nginx
+!/nginx
+/nginx/*
+!/nginx/*.conf
+
+!/nginx/sites-available
+/nginx/sites-available/*
+!/nginx/sites-available/*.conf
+
+# hosts
+!hosts
+
+# vim
+!vimrc
+
+# backup sub
+!backups.d
+
+# pacman
+!pacman.conf
+
+# special environment settings
+!*.env
+
+# motd for pam/login/ssh
+!motd
+
+# epiphyte folders
+!epiphyte
+!epiphyte.d/
+
+# environment
+!environment
+
+# modprobe.
+!modprobe.d/

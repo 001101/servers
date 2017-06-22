@@ -1,0 +1,10 @@
+[Unit]
+Description=Synchronize package cache
+
+[Timer]
+Unit=pkgcaching.service
+OnCalendar=*:0/30
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=Perform package cache cleanup
+
+[Service]
+Type=oneshot
+ExecStart=/opt/pkgcache/server.sh
