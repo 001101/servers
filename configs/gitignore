@@ -1,5 +1,5 @@
 /*
-!.gitignore
+.gitignore
 !.gitmodules
 
 # libvirt definitions
@@ -57,9 +57,6 @@
 
 # hosts
 !hosts
-
-# vim
-!vimrc
 
 # backup sub
 !backups.d
