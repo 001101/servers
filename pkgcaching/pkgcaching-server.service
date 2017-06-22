@@ -3,4 +3,4 @@ Description=Perform package cache cleanup
 
 [Service]
 Type=oneshot
-ExecStart=/opt/pkgcache/server.sh
+ExecStart=/opt/epiphyte/servers/pkgcache-server.sh

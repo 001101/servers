@@ -1,6 +1,7 @@
 #!/bin/bash
+source /etc/epiphyte.d/pkgcache.conf
 CACHED="cache/"
-HOST_CACHE=$PKG_HOST/$CACHED
+HOST_CACHE=$PACKAGE_HOST/$CACHED
 CACHE=/var/cache/pacman/pkg/
 
 # get what we don't have
