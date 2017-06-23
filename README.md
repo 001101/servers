@@ -9,8 +9,14 @@ configure and setup the epiphyte [repository](https://github.com/epiphyte/reposi
 
 make sure to pre-clean and then install
 ```
-rm -f /etc/vimrc
 pacman -S epiphyte-servers
+```
+
+## bootstrapper
+
+setup initial sshd, iptables, resolv, and vimrc settings for the system
+```
+epiphyte-bootstrap-server
 ```
 
 ## zfs
