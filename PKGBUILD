@@ -1,6 +1,6 @@
 pkgname=epiphyte-servers
-pkgver=0.2
-pkgrel=2
+pkgver=0
+pkgrel=1
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
@@ -9,6 +9,11 @@ depends=()
 source=("git+$url")
 sha512sums=('SKIP')
 backup=("etc/epiphyte.d/pkgcache.conf")
+
+pkgver() {
+    cd ${srcdir}/servers
+    printf "%s.c%s" "$(date +%Y%m%d)" "$(git rev-parse --short HEAD)"
+}
 
 package() {
     cd ${srcdir}/servers
