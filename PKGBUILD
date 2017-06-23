@@ -12,7 +12,7 @@ backup=("etc/epiphyte.d/pkgcache.conf")
 
 pkgver() {
     cd ${srcdir}/servers
-    printf "%s.c%s" "$(date +%Y%m%d)" "$(git rev-parse --short HEAD)"
+    printf "%s.c%s" "$(date -u +%Y%m%d.%H%M)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
