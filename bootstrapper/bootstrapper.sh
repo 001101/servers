@@ -4,7 +4,7 @@ if [[ "$yn" != "y" ]]; then
     exit 0
 fi
 echo "bootstrapper..."
-BOOSTRAP="/opt/epiphyte/servers/bootstrap/"
+BOOTSTRAP="/opt/epiphyte/servers/bootstrap/"
 read -p "ssh port? " sshport
 if [ -z "$sshport" ]; then
     sshport="22"

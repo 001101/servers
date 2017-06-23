@@ -1,6 +1,6 @@
 pkgname=epiphyte-servers
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
