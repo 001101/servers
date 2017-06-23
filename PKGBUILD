@@ -1,6 +1,6 @@
 pkgname=epiphyte-servers
-pkgver=0.1
-pkgrel=6
+pkgver=0.2
+pkgrel=1
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
@@ -27,7 +27,7 @@ package() {
     local _bootdir=$_pkgdir/bootstrap/
     # bootstrap
     install -Dm 755 bootstrapper/bootstrapper.sh $pkgdir/usr/local/bin/epiphyte-bootstrap-server
-    for f in $(find bootstrapper/ -type f -print | grep "\.template"0); do
+    for f in $(find bootstrapper/ -type f -print | grep "\.template"); do
         install -Dm 644 $f $_bootdir$(basename $f)
     done
 }
