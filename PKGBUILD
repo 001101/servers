@@ -29,5 +29,6 @@ package() {
     for f in $(find bootstrapper/ -type f -print | grep "\.template"); do
         install -Dm 644 $f $_bootdir$(basename $f)
     done
+    install -Dm 755 bootstrapper/pacstrap-container.sh $pkgdir/usr/local/bin/pacstrap-container
 }
 
