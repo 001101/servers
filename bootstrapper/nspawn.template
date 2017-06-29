@@ -1,0 +1,4 @@
+[Files]
+Bind=/var/cache/pacman/
+Bind=/etc/pacman.conf
+BindReadOnly=/etc/resolv.conf

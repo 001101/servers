@@ -11,4 +11,12 @@ if [ ! -d "$1" ]; then
     echo "no directory found: $1"
     exit 1
 fi
+
 pacstrap -i -c -d $1 base vim bash-completion --ignore linux --ignore nano --ignore linux-firmware ${@:2}
+if [ $? -ne 0 ]; then
+    echo "failed to pacstrap...see previous errors"
+    exit 1
+fi
+name=$(echo $1 | sed "s#/##g")
+mkdir -p /etc/systemd/nspawn
+cat /opt/epiphyte/servers/bootstrap/nspawn.template > /etc/systemd/nspawn/$name.nspawn
