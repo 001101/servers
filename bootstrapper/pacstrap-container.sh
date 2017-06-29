@@ -11,4 +11,4 @@ if [ ! -d "$1" ]; then
     echo "no directory found: $1"
     exit 1
 fi
-pacstrap -i -c -d $1 base vim bash-completion --ignore linux --ignore nano --ignore linuxfirmware ${@:2}
+pacstrap -i -c -d $1 base vim bash-completion --ignore linux --ignore nano --ignore linux-firmware ${@:2}
