@@ -1,5 +1,5 @@
 pkgname=epiphyte-servers
-pkgrel=1
+pkgrel=2
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
@@ -7,14 +7,10 @@ makedepends=('git' 'arch-install-scripts')
 depends=('perl-json' 'git' 'vim' 'bash-completion')
 source=("git+$url")
 sha512sums=('SKIP')
-backup=("etc/epiphyte.d/pkgcache.conf")
 
 package() {
     cd ${srcdir}/servers
     local _pkgdir=$pkgdir"/opt/epiphyte/servers"
-    install -Dm 755 pkgcaching/run.sh $_pkgdir/pkgcache.sh
-    install -Dm 755 pkgcaching/server.sh $_pkgdir/pkgcache-server.sh
-    install -Dm 644 pkgcaching/pkgcache.conf $pkgdir/etc/epiphyte.d/pkgcache.conf
     install -Dm 644 configs/gitignore $pkgdir/etc/.gitignore
     install -Dm 644 configs/ntpd.conf $pkgdir/etc/systemd/system/ntpd.service.d/override.conf
     install -Dm 644 configs/nspawn.conf $pkgdir/etc/systemd/system/systemd-nspawn@.service.d/override.conf

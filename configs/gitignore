@@ -72,7 +72,6 @@
 !motd
 
 # epiphyte folders
-!epiphyte
 !epiphyte.d/
 
 # environment
