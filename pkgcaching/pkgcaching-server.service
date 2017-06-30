@@ -1,6 +1,0 @@
-[Unit]
-Description=Perform package cache cleanup
-
-[Service]
-Type=oneshot
-ExecStart=/opt/epiphyte/servers/pkgcache-server.sh

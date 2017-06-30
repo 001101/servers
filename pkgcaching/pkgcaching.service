@@ -1,6 +1,0 @@
-[Unit]
-Description=Perform package cache syncing
-
-[Service]
-Type=oneshot
-ExecStart=/opt/epiphyte/servers/pkgcache.sh

@@ -19,6 +19,13 @@ setup initial sshd, iptables, resolv, and vimrc settings for the system
 epiphyte-bootstrap-server
 ```
 
+for container helper to create a new systemd-nspawn container
+```
+# cd /var/lib/machines
+# mkdir -p <name>
+pacstrap-container <name>
+```
+
 ## zfs
 
 ### scrub monthly
@@ -26,22 +33,6 @@ epiphyte-bootstrap-server
 enable zfs monthly scrubbing
 ```
 systemctl enable zfs-scrub-monthly.timer
-```
-
-## pkgcaching
-
-### server
-
-enable timed server tasks to clean a package cache
-```
-systemctl enable pkgcaching-server.timer
-```
-
-### client
-
-request an rsyncd-based cache pull
-```
-systemctl enable pkgcaching.timer
 ```
 
 ## sudo ssh agent
