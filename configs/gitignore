@@ -34,6 +34,8 @@
 !mkinitcpio.conf
 
 # iptables
+!/iptables
+/iptables/*
 !/iptables/iptables.rules
 
 # samba
