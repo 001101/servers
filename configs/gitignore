@@ -45,6 +45,7 @@
 !/ssh
 /ssh/*
 !/ssh/sshd_config
+!/ssh/ssh_config
 
 # nginx
 !/nginx
