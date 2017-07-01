@@ -75,6 +75,7 @@
 
 # epiphyte folders
 !epiphyte.d/
+epiphyte.d/*.pacnew
 
 # environment
 !environment
