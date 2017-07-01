@@ -1,10 +1,10 @@
 pkgname=epiphyte-servers
-pkgrel=5
+pkgrel=1
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
 makedepends=('git' 'arch-install-scripts')
-depends=('perl-json' 'git' 'vim' 'bash-completion')
+depends=('perl-json' 'git' 'vim' 'bash-completion' 'smirc')
 source=("git+$url")
 sha512sums=('SKIP')
 
