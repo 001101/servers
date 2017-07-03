@@ -14,6 +14,12 @@ LOCATION='/opt/epiphyte/syspack/'
 "
     exit 1
 fi
+
+if [ -z "$SUDO_SSH_USER" ]; then
+    echo "no ssh agent found"
+    exit 1
+fi
+
 source $SYSPACK
 scp $HOST:$LOCATION $LOCATION
 if [ $? -ne 0 ]; then
