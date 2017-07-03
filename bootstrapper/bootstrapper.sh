@@ -11,6 +11,12 @@ SSHD_OPT="ssh"
 VIM_OPT="vim"
 RESOLV_OPT="resolv"
 
+
+if [ -e "/etc/epiphyte.d/syspack.conf" ]; then
+    echo "system is controlled via syspack, no-op"
+    exit 0
+fi
+
 _push_template() {
     echo "applying $2"
     if [ $1 -eq $VALID ]; then
