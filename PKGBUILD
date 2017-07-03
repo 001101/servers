@@ -1,5 +1,5 @@
 pkgname=epiphyte-servers
-pkgrel=2
+pkgrel=1
 pkgdesc="epiphyte package build helpers"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
@@ -27,5 +27,6 @@ package() {
         install -Dm 644 $f $_bootdir$(basename $f)
     done
     install -Dm 755 bootstrapper/pacstrap-container.sh $pkgdir/usr/local/bin/pacstrap-container
+    install -Dm 755 syspack/epiphyte-syspacked.sh $pkgdir/usr/local/bin/epiphyte-syspack
 }
 
