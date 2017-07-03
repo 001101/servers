@@ -21,7 +21,7 @@ if [ -z "$SUDO_SSH_USER" ]; then
 fi
 
 source $SYSPACK
-scp $HOST:$LOCATION $LOCATION
+scp -r $SUDO_SSH_USER@$HOST:$LOCATION/ $(dirname $LOCATION)
 if [ $? -ne 0 ]; then
     echo "unable to update syspack definitions."
     exit 1
