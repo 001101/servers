@@ -1,5 +1,6 @@
 #!/bin/bash
 SYSPACK="/etc/epiphyte.d/syspack.conf"
+DEPLOY_TO="/opt/epiphyte"
 if [ ! -e $SYSPACK ]; then
     echo "no $SYSPACK file defined, please declare a syspack
 =======
@@ -10,7 +11,7 @@ $SYSPACK
 ---
 HOST='host.fqdn.domain.name'
 CATEGORY='<category>'
-LOCATION='/opt/epiphyte/syspack/'
+LOCATION='{$DEPLOY_TO}/syspack/'
 "
     exit 1
 fi
@@ -21,7 +22,11 @@ if [ -z "$SUDO_SSH_USER" ]; then
 fi
 
 source $SYSPACK
-scp -r $SUDO_SSH_USER@$HOST:$LOCATION/ $(dirname $LOCATION)
+if [ -d "$DEPLOY_TO/syspack" ]; then
+    rm -rf "$DEPLOY_TO/syspack"
+fi
+
+scp -r $SUDO_SSH_USER@$HOST:$LOCATION/ $DEPLOY_TO
 if [ $? -ne 0 ]; then
     echo "unable to update syspack definitions."
     exit 1
