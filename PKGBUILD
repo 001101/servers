@@ -4,7 +4,7 @@ pkgdesc="epiphyte server installations"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
 makedepends=('git' 'arch-install-scripts')
-depends=('perl-json' 'git' 'vim' 'bash-completion' 'smirc')
+depends=('git' 'vim' 'bash-completion' 'smirc')
 source=("git+$url")
 sha512sums=('SKIP')
 
