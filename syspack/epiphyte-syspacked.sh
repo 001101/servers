@@ -11,7 +11,7 @@ $SYSPACK
 ---
 HOST='host.fqdn.domain.name'
 CATEGORY='<category>'
-LOCATION='{$DEPLOY_TO}/syspack/'
+LOCATION='{$DEPLOY_TO}/source/syspack/'
 "
     exit 1
 fi
@@ -22,8 +22,9 @@ if [ -z "$SUDO_SSH_USER" ]; then
 fi
 
 source $SYSPACK
-if [ -d "$DEPLOY_TO/syspack" ]; then
-    rm -rf "$DEPLOY_TO/syspack"
+_use="$DEPLOY_TO/syspack"
+if [ -d "$_use" ]; then
+    rm -rf "$_use"
 fi
 
 scp -r $SUDO_SSH_USER@$HOST:$LOCATION/ $DEPLOY_TO
@@ -32,12 +33,11 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $LOCATION
 _apply() {
     echo
     echo "==========="
     echo "applying $1"
-    local _path=${LOCATION}$1/
+    local _path=$_use$1/
     mkdir -p $_path
     for f in $(find $_path -type f); do
         local _adjust=$(echo $f | sed "s#$_path#/etc/#g")

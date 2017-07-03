@@ -1,5 +1,5 @@
 pkgname=epiphyte-servers
-pkgrel=3
+pkgrel=4
 pkgdesc="epiphyte server installations"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
