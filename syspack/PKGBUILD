@@ -1,0 +1,9 @@
+pkgname=epiphyte-syspack-update
+pkgrel=5
+pkgdesc="epiphyte system packing update handler"
+url="https://github.com/epiphyte/servers"
+license=('MIT')
+makedepends=('epiphyte-servers')
+depends=('git')
+source=("git+$url")
+sha512sums=('SKIP')

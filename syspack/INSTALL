@@ -1,0 +1,7 @@
+post_install() {
+    epiphyte-syspack
+}
+
+post_upgrade() {
+    epiphyte-syspack
+}
