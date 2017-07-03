@@ -1,6 +1,6 @@
 pkgname=epiphyte-servers
 pkgrel=3
-pkgdesc="epiphyte package build helpers"
+pkgdesc="epiphyte server installations"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
 makedepends=('git' 'arch-install-scripts')
