@@ -37,7 +37,7 @@ _apply() {
     echo
     echo "==========="
     echo "applying $1"
-    local _path=$_use$1/
+    local _path=$_use/$1/
     mkdir -p $_path
     for f in $(find $_path -type f); do
         local _adjust=$(echo $f | sed "s#$_path#/etc/#g")
