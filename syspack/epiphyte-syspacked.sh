@@ -47,3 +47,12 @@ _apply() {
 _apply "common"
 _apply "$CATEGORY"
 _apply "$HOSTNAME"
+
+
+echo
+echo "..."
+echo "checking etcgit"
+echo
+cd /etc && git status
+cd /etc && git diff-index --name-only HEAD --
+cd /etc && git status -sb | grep 'ahead'
