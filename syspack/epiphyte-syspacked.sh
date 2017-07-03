@@ -61,3 +61,4 @@ echo
 cd /etc && git status
 cd /etc && git diff-index --name-only HEAD --
 cd /etc && git status -sb | grep 'ahead'
+exit 0
