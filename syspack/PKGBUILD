@@ -7,3 +7,9 @@ makedepends=('epiphyte-servers')
 depends=('git')
 source=("git+$url")
 sha512sums=('SKIP')
+
+package() {
+    cd ${srcdir}/servers
+    install -Dm 644 hooks/update-syspack.hook $pkgdir/usr/share/libalpm/hooks/update-epiphyte-syspack.hook
+}
+
