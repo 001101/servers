@@ -28,5 +28,7 @@ package() {
     done
     install -Dm 755 bootstrapper/pacstrap-container.sh $pkgdir/usr/local/bin/pacstrap-container
     install -Dm 755 syspack/epiphyte-syspacked.sh $pkgdir/usr/local/bin/epiphyte-syspack
+    install -Dm 644 hooks/update-motd.hook $pkgdir/usr/share/libalpm/hooks/update-epiphyte-motd.hook
+    install -Dm 755 hooks/epiphyte-motd.sh $pkgdir/usr/local/bin/epiphyte-motd
 }
 
