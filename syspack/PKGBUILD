@@ -1,5 +1,5 @@
 pkgname=epiphyte-syspack-update
-pkgrel=5
+pkgrel=1
 pkgdesc="epiphyte system packing update handler"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
