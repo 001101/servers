@@ -70,9 +70,6 @@
 # special environment settings
 !*.env
 
-# motd for pam/login/ssh
-!motd
-
 # epiphyte folders
 !epiphyte.d/
 epiphyte.d/*.pacnew
