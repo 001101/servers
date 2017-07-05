@@ -41,7 +41,7 @@ _apply() {
     mkdir -p $_path
     for f in $(find $_path -type f); do
         local _adjust=$(echo $f | sed "s#$_path#/etc/#g")
-        echo -n "  -> $_adjust"
+        echo "  -> $_adjust"
         install -Dm 644 $f $_adjust
     done
     echo
