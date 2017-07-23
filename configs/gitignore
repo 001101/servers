@@ -73,6 +73,7 @@
 # epiphyte folders
 !epiphyte.d/
 epiphyte.d/*.pacnew
+epiphyte.d/smirc*
 
 # environment
 !environment
