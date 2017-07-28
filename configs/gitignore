@@ -74,6 +74,7 @@
 !epiphyte.d/
 epiphyte.d/*.pacnew
 epiphyte.d/smirc*
+epiphyte.d/sysmon*
 
 # environment
 !environment
