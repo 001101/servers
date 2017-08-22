@@ -4,7 +4,7 @@ pkgdesc="epiphyte server installations"
 url="https://github.com/epiphyte/servers"
 license=('MIT')
 makedepends=('git' 'arch-install-scripts')
-depends=('git' 'vim' 'bash-completion' 'smirc')
+depends=('git' 'vim' 'bash-completion' 'smirc' 'sysmon')
 source=("git+$url")
 sha512sums=('SKIP')
 
@@ -30,5 +30,6 @@ package() {
     install -Dm 755 syspack/epiphyte-syspacked.sh $pkgdir/usr/local/bin/epiphyte-syspack
     install -Dm 644 hooks/update-motd.hook $pkgdir/usr/share/libalpm/hooks/update-epiphyte-motd.hook
     install -Dm 755 hooks/epiphyte-motd.sh $pkgdir/usr/local/bin/epiphyte-motd
+    install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
 
