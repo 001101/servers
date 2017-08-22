@@ -22,14 +22,14 @@ package() {
 
     local _bootdir=$_pkgdir/bootstrap/
     # bootstrap
-    install -Dm 755 bootstrapper/bootstrapper.sh $pkgdir/usr/local/bin/epiphyte-bootstrap-server
+    install -Dm 755 bootstrapper/bootstrapper.sh $pkgdir/usr/bin/epiphyte-bootstrap-server
     for f in $(find bootstrapper/ -type f -print | grep "\.template"); do
         install -Dm 644 $f $_bootdir$(basename $f)
     done
-    install -Dm 755 bootstrapper/pacstrap-container.sh $pkgdir/usr/local/bin/pacstrap-container
-    install -Dm 755 syspack/epiphyte-syspacked.sh $pkgdir/usr/local/bin/epiphyte-syspack
+    install -Dm 755 bootstrapper/pacstrap-container.sh $pkgdir/usr/bin/pacstrap-container
+    install -Dm 755 syspack/epiphyte-syspacked.sh $pkgdir/usr/bin/epiphyte-syspack
     install -Dm 644 hooks/update-motd.hook $pkgdir/usr/share/libalpm/hooks/update-epiphyte-motd.hook
-    install -Dm 755 hooks/epiphyte-motd.sh $pkgdir/usr/local/bin/epiphyte-motd
+    install -Dm 755 hooks/epiphyte-motd.sh $pkgdir/usr/bin/epiphyte-motd
     install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
 
