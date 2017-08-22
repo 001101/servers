@@ -7,4 +7,4 @@ Target = epiphyte-syspack-update
 [Action]
 Depends = epiphyte-servers
 When = PostTransaction
-Exec = /usr/local/bin/epiphyte-syspack
+Exec = /usr/bin/epiphyte-syspack

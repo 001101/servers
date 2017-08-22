@@ -6,4 +6,4 @@ Target = *
 
 [Action]
 When = PostTransaction
-Exec = /usr/local/bin/epiphyte-motd
+Exec = /usr/bin/epiphyte-motd
