@@ -1,5 +1,6 @@
 #!/bin/bash
 SYSPACK="/etc/epiphyte.d/syspack.conf"
+PACKCON="/tmp/packcon.working"
 DEPLOY_TO="/opt/epiphyte"
 if [ ! -e $SYSPACK ]; then
     echo "no $SYSPACK file defined, please declare a syspack
@@ -27,7 +28,8 @@ if [ -d "$_use" ]; then
     rm -rf "$_use"
 fi
 
-scp -r $SUDO_SSH_USER@$HOST:$LOCATION/ $DEPLOY_TO
+ssh_target="$SUDO_SSH_USER@$HOST:$LOCATION/"
+scp -r $ssh_target $DEPLOY_TO
 if [ $? -ne 0 ]; then
     echo "unable to update syspack definitions."
     exit 1
@@ -61,4 +63,8 @@ echo
 cd /etc && git status
 cd /etc && git diff-index --name-only HEAD --
 cd /etc && git status -sb | grep 'ahead'
+
+echo $(date +%Y-%m-%dT%H:%M:%S) > $PACKCON
+pacman -Sl epiphyte | grep installed | cut -d " " -f 2-100 >> $PACKCON
+scp $PACKCON ${ssh_target}"../../packcon/$HOSTNAME.packcon"
 exit 0
