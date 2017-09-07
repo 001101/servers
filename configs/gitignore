@@ -58,9 +58,6 @@
 /nginx/sites-available/*
 !/nginx/sites-available/*.conf
 
-# hosts
-!hosts
-
 # backup sub
 !backups.d
 
