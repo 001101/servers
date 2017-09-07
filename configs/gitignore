@@ -76,5 +76,8 @@ epiphyte.d/*.pacnew
 epiphyte.d/smirc*
 epiphyte.d/sysmon*
 
+# environment
+!environment
+
 # modprobe.
 !modprobe.d/
