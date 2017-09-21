@@ -10,4 +10,3 @@ AuthenticationMethods publickey
 LogLevel VERBOSE
 Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO
 PermitRootLogin No
-UsePrivilegeSeparation sandbox
