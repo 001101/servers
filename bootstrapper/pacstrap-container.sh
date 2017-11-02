@@ -19,4 +19,4 @@ if [ $? -ne 0 ]; then
 fi
 name=$(echo $1 | sed "s#/##g")
 mkdir -p /etc/systemd/nspawn
-cat /opt/epiphyte/servers/bootstrap/nspawn.template > /etc/systemd/nspawn/$name.nspawn
+cat /usr/share/epiphyte-servers/bootstrap/nspawn.template > /etc/systemd/nspawn/$name.nspawn

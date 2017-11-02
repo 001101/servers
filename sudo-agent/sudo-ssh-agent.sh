@@ -1,1 +1,1 @@
-alias sudo-ssh-agent='/opt/epiphyte/servers/sudo-agent.sh'
+alias sudo-ssh-agent='/usr/share/epiphyte-servers/sudo-agent.sh'

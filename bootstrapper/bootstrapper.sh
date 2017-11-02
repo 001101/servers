@@ -52,7 +52,7 @@ if [[ "$yn" != "y" ]]; then
 fi
 echo "processing..."
 
-BOOTSTRAP="/opt/epiphyte/servers/bootstrap/"
+BOOTSTRAP="/usr/share/epiphyte-servers/bootstrap/"
 if [ $DO_SSH -eq $VALID ] || [ $DO_IPTABLES -eq $VALID ]; then
     read -p "ssh port? " sshport
     if [ -z "$sshport" ]; then
