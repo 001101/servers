@@ -1,0 +1,6 @@
+[Unit]
+Description=Run btrfs maintenance scripts
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/btrfs-maintenance
